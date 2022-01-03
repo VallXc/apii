@@ -1,0 +1,59 @@
+<% layout('template/layout') -%> <% block('content_header', `
+<section class="content-header">
+  <div class="row">
+    <div class="col-xs-12">
+      <ol class="breadcrumb">
+        <li class="">
+          <a href="http://api-pemalas.herokuapp.com"
+            ><i class="fa fa-home"></i> Home</a
+          >
+        </li>
+        <li class="">
+          <a href="http://api-pemalas.herokuapp.com/documentation"
+            ><i class="fa fa-book"></i><span> Documentation</span></a
+          >
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+`) -%> <% script('/dist/js/prism.js') -%> <% stylesheet('/dist/css/prism.css')
+-%>
+<%- partial("./partials/listDocs") %>
+<div class="col-lg-9">
+  <div class="row">
+    <!-- <div class="col-lg-10">
+      <div class="">
+        <h4 class="text-primary">
+          <a href="#TtDownNowWm" id="TtDownNowWm">#</a
+          ><span style="font-weight: bold">Tiktok Download No WaterMark</span>
+        </h4>
+        <p>Tiktok Download No WaterMark.</p>
+        <div class="input-group">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-success">GET</button>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            value="http://api-pemalas.herokuapp.com/"
+            readonly
+          />
+        </div>
+      </div>
+      <p>Example Result</p>
+      <pre>
+        <code class="language-json">
+          status: true,
+          result: {
+            urlNoWm: "https"
+          }
+          </code>
+        </pre>
+    </div> -->
+    <%- partial("./allDocs/playstoreSearch") %>
+    <%- partial("./allDocs/gsmarenaSearch") %>
+    <%- partial("./allDocs/gsmarenaDetail") %>
+    <%- partial("./allDocs/quoteMaker") %>
+  </div>
+</div>
